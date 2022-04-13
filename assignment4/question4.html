@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+            var val = 0,ref;
+            function myfunstart() {
+                ref=setInterval(()=>{
+                    val++;
+                    document.getElementById("txt").innerHTML = val;
+                }
+            ,1000);
+            document.getElementById("a1").disabled=true;
+            document.getElementById("a2").disabled=false;
+        }
+        function myfunstop(){
+            clearInterval(ref);
+            document.getElementById("a2").disabled=true;
+            document.getElementById("a1").disabled=false;
+        }
+        </script>
+    </head>
+    <body>
+        <button id="a1" onclick="myfunstart()">Start</button>&nbsp;&nbsp;
+        <button id="a2" onclick="myfunstop()">Stop</button><br/><br/>
+        Current Value: <span id="txt">0</span>
+    </body>                   
+</html>
