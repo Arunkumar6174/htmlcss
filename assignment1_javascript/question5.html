@@ -1,0 +1,34 @@
+<html>
+<head>
+<script>
+ 
+      const unit_charge=prompt("enter the number of units");
+	  
+	  //logic
+	  
+	  
+	  if(unit_charge<=50){
+	    var result = unit_charge*.5;
+	    console.log('Bill amount is:'+result);
+	  }
+	   else if((unit_charge>50) && (unit_charge<=150)){
+	    var result = unit_charge*.75;
+	    console.log('Bill amount is:'+result);
+	  }
+	  else if((unit_charge>150) && (unit_charge<=250)){
+	    var result = unit_charge*1.20;
+	    console.log('Bill amount is:'+result);
+	  }
+	  else if(unit_charge>250){
+	    var res = (unit_charge*1.50);
+		var res1 = (res*20)/100;
+		var result = res+res1;
+		
+	    console.log('Bill amount is:'+result);
+	  }
+</script>
+</head>
+<body>
+<h4>CHECK RESULT IN CONSOLE</h4>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+   <title>JavaScript program to Identify the given input is Vowel or Consonant using Switch Case</title>
+
+<script type="text/javascript">
+function vowel()
+{
+var ch = document.getElementById("first").value;
+var index = 0;
+
+    console.log(ch.charCodeAt(index));
+//check if the character vowel
+
+    if(ch=='a' || ch == 'A' ||
+       ch == 'e' || ch == 'E' ||
+       ch=='i' || ch == 'I' ||
+       ch == 'o' || ch == 'O' ||
+       ch=='u' || ch == 'u')
+       {
+          document.getElementById("num1").innerHTML= "vowel character";
+       }
+   else if((ch.charCodeAt(index)>=0 && ch.charCodeAt(index)<=64) || (ch.charCodeAt(index)>90 &&
+           ch.charCodeAt(index)<97)&& (ch.charCodeAt(index)>=123 ||  ch.charCodeAt(index)<=125))
+   {
+     document.getElementById("num1").innerHTML= "Not an alphabet";
+	 //console.log("not alphabet");
+   }
+   else{
+      document.getElementById("num1").innerHTML= "Consonent";
+   }
+   
+}
+</script>
+</head>
+<body>
+   <table>
+     <tr>
+        <td> <input type="text" name="a" id="first" placeholder="Enter character"/> </td>
+	 </tr>
+     <tr>
+        <td> <button onclick = "vowel()">Submit</button> </td>
+     </tr>
+   </table>
+   
+   <div id="num1"></div>
+</body>
+
+</html>

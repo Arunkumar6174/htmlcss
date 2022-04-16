@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function operation() {
+var a = parseInt(document.getElementById("num1").value);
+var b = parseInt(document.getElementById("num2").value);
+var operand = document.getElementById("opr").value;
+switch (operand) {
+case "+":
+var c = a + b;
+console.log("sum of two numbers is : " + c);
+break;
+case "-":
+var c = a - b;
+console.log("substraction of two numbers is : " + c);
+break;
+case "/":
+if (b == 0) {
+console.log("Operation cannot possible");
+break;
+} else {
+var c = a / b;
+console.log("division of two numbers is : " + c);
+break;
+}
+case "*":
+var c = a * b;
+console.log("multiplication of two numbers is : " + c);
+break;
+default:
+alert("Please enter correct type of operation");
+}
+}
+</script>
+</head>
+
+
+
+<body>
+<label for="num1">Enter value of a : </label><input name="num1" type="text" id="num1" placeholder="Enter value of a" /><br /><br />
+<label for="num2">Enter value of b : </label><input name="num2" type="text" id="num2" placeholder="Enter value of b" /><br /><br />
+<label for="opr">Enter type of operation : </label><input name="opr" type="text" id="opr" placeholder="Enter + or - or / or *" /><br /><br />
+<button onclick="operation()">Submit</button>
+</body>
+
+
+
+</html>
