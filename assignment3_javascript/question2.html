@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+            function data(){
+             const states=new Map([['Telangana','Hyderabad'],['Maharasta','Mumbai'],['Karnataka','Bangloor']]);
+           states.set('Tamilanadu','Channai');
+           states.set('Panjab','Chandegrah');
+           states.set('Kerala','Triruvanathapuram');
+           console.log(states);
+           let shtml="<table border=1>";
+           states.forEach((value,key)=>{shtml+="<tr><td>"+key+"</td><td>"+value+"</td></tr>";})
+           shtml+="</table>";
+           document.getElementById("tstates").innerHTML=shtml;
+
+           //console.log(states.has('goa'));
+           //console.log(states.has('Hyderabad'));
+            }
+        </script>
+    </head>
+    <body onload="data()">
+       <div id="tstates"></div>
+    </body>
+</html>
